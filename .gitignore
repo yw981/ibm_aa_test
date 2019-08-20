@@ -3,7 +3,6 @@
 **/data
 *.npy
 **/pic
-*.jpg
 *.jpeg
 *.png
 *.bmp
