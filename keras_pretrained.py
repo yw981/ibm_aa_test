@@ -21,7 +21,7 @@ print('Predicted:', decode_predictions(preds, top=3)[0])
 
 epsilon = .3
 classifier = KerasClassifier(model=model)
-adv_crafter = FastGradientMethod(eps=epsilon)
+adv_crafter = FastGradientMethod(classifier=classifier,eps=epsilon)
 x_test_adv = adv_crafter.generate(x=x)
 preds_adv = model.predict(x_test_adv)
 print('Predicted:', decode_predictions(preds_adv, top=3)[0])
